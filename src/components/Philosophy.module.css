@@ -1,0 +1,187 @@
+.philosophySection {
+  padding: 8rem 5%;
+  background: var(--light);
+  position: relative;
+  overflow: hidden;
+}
+
+.philosophySection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0, 163, 224, 0.05), rgba(0, 119, 182, 0.05));
+  z-index: 1;
+}
+
+.philosophyContent {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 6rem;
+}
+
+.sectionHeader h2 {
+  font-size: 2.5rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.headerLine {
+  width: 80px;
+  height: 3px;
+  background: var(--primary);
+  margin: 1rem auto;
+}
+
+.sectionSubtitle {
+  color: var(--text);
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+.valuesContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+  padding: 2rem 0;
+}
+
+.valueCard {
+  position: relative;
+  background: var(--light);
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 163, 224, 0.1);
+  overflow: hidden;
+}
+
+.valueCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.valueIconWrapper {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 2rem;
+  background: var(--gradient-sport);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+.valueIcon {
+  font-size: 2.5rem;
+  color: var(--light);
+}
+
+.valueContent {
+  position: relative;
+  z-index: 2;
+}
+
+.valueTitle {
+  color: var(--accent);
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.valueLine {
+  width: 50px;
+  height: 3px;
+  background: var(--primary);
+  margin: 1rem auto;
+  transition: width 0.3s ease;
+}
+
+.valueCard:hover .valueLine {
+  width: 80px;
+}
+
+.valueDescription {
+  color: var(--text);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-top: 1.5rem;
+}
+
+.valueBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  opacity: 0.03;
+  transition: all 0.3s ease;
+}
+
+.valueLetter {
+  font-size: 15rem;
+  font-weight: 900;
+  color: var(--accent);
+}
+
+.valueCard:hover .valueBackground {
+  transform: scale(1.1);
+  opacity: 0.05;
+}
+
+@media (max-width: 992px) {
+  .valuesContainer {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .philosophySection {
+    padding: 6rem 5%;
+  }
+
+  .sectionHeader {
+    margin-bottom: 4rem;
+  }
+
+  .sectionHeader h2 {
+    font-size: 2rem;
+  }
+
+  .valueCard {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .valueTitle {
+    font-size: 1.6rem;
+  }
+
+  .valueDescription {
+    font-size: 1rem;
+  }
+
+  .valueLetter {
+    font-size: 12rem;
+  }
+}

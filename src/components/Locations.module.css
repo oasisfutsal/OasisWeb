@@ -1,0 +1,184 @@
+.locationsSection {
+  padding: 8rem 5%;
+  background: var(--light);
+  position: relative;
+  overflow: hidden;
+}
+
+.locationsSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0, 163, 224, 0.05), rgba(0, 119, 182, 0.05));
+  z-index: 1;
+}
+
+.locationsContent {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 6rem;
+}
+
+.sectionHeader h2 {
+  font-size: 2.5rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.headerLine {
+  width: 80px;
+  height: 3px;
+  background: var(--primary);
+  margin: 1rem auto;
+}
+
+.sectionSubtitle {
+  color: var(--text);
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+.locationsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 3rem;
+}
+
+.locationCard {
+  position: relative;
+  background: var(--light);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.locationCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.locationImage {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  background: var(--gradient-sport);
+  overflow: hidden;
+}
+
+.locationImage::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(0, 0, 0, 0.4) 100%
+  );
+  z-index: 1;
+}
+
+.locationIcon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+  color: rgba(255, 255, 255, 0.8);
+  z-index: 2;
+}
+
+.locationInfo {
+  padding: 2rem;
+  background: var(--light);
+}
+
+.locationName {
+  font-size: 1.5rem;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.locationAddress {
+  color: var(--primary);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.locationDescription {
+  color: var(--text);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.locationFeatures {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.feature {
+  background: rgba(0, 163, 224, 0.1);
+  color: var(--primary);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.locationLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.locationLink:hover {
+  transform: translateX(5px);
+}
+
+@media (max-width: 768px) {
+  .locationsSection {
+    padding: 6rem 5%;
+  }
+
+  .sectionHeader {
+    margin-bottom: 4rem;
+  }
+
+  .sectionHeader h2 {
+    font-size: 2rem;
+  }
+
+  .locationsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .locationImage {
+    height: 200px;
+  }
+}

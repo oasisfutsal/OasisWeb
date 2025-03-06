@@ -1,0 +1,238 @@
+.registrationForm {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.formTitle {
+  font-size: 1.8rem;
+  color: var(--accent, #1e293b);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.formTitle::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: var(--primary, #00a3e0);
+}
+
+.formSection {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.formSection h3 {
+  font-size: 1.2rem;
+  color: var(--accent, #1e293b);
+  margin-bottom: 1.2rem;
+}
+
+.formRow {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.formGroup {
+  flex: 1;
+  margin-bottom: 1.2rem;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--accent, #1e293b);
+}
+
+.formGroup input,
+.formGroup select {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.formGroup input:focus,
+.formGroup select:focus {
+  outline: none;
+  border-color: var(--primary, #00a3e0);
+  box-shadow: 0 0 0 2px rgba(0, 163, 224, 0.1);
+}
+
+.inputError {
+  border-color: #e53e3e !important;
+}
+
+.errorText {
+  display: block;
+  color: #e53e3e;
+  font-size: 0.85rem;
+  margin-top: 0.3rem;
+}
+
+.errorMessage {
+  background-color: #fff5f5;
+  color: #e53e3e;
+  padding: 1rem;
+  border-radius: 5px;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid #e53e3e;
+}
+
+.checkboxGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.checkboxGroup input {
+  width: auto;
+}
+
+.checkboxGroup label {
+  margin-bottom: 0;
+}
+
+.checkboxGroup a {
+  color: var(--primary, #00a3e0);
+  text-decoration: none;
+}
+
+.checkboxGroup a:hover {
+  text-decoration: underline;
+}
+
+.formActions {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.submitButton {
+  background-color: var(--primary, #00a3e0);
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submitButton:hover {
+  background-color: var(--secondary, #0077b6);
+  transform: translateY(-2px);
+}
+
+.submitButton:disabled {
+  background-color: #cbd5e0;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.paymentSummary {
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  background-color: #f8fafc;
+  border-radius: 5px;
+  border: 1px solid #eee;
+}
+
+.paymentRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid #eee;
+  font-size: 1rem;
+}
+
+.paymentRow:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.paymentTotal {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--accent, #1e293b);
+  margin-top: 0.8rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid #ddd;
+  border-bottom: none;
+}
+
+.paymentNote {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background-color: #f8fafc;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  color: #64748b;
+  border-left: 4px solid var(--primary, #00a3e0);
+}
+
+.cardElementContainer {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: white;
+  margin-bottom: 1.5rem;
+}
+
+.successContainer {
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.successIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background-color: #10b981;
+  color: white;
+  font-size: 2.5rem;
+  border-radius: 50%;
+  margin: 0 auto 2rem;
+}
+
+.successContainer h2 {
+  font-size: 1.8rem;
+  color: var(--accent, #1e293b);
+  margin-bottom: 1.5rem;
+}
+
+.successContainer p {
+  margin-bottom: 1rem;
+  color: #64748b;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .formRow {
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  .registrationForm {
+    padding: 1.5rem;
+  }
+}

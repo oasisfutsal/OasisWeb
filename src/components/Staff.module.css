@@ -1,0 +1,231 @@
+.staffSection {
+  padding: 8rem 5%;
+  background: var(--light);
+  position: relative;
+  overflow: hidden;
+}
+
+.staffSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0, 163, 224, 0.05), rgba(0, 119, 182, 0.05));
+  z-index: 1;
+}
+
+.staffContent {
+  position: relative;
+  z-index: 2;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.sectionHeader h2 {
+  font-size: 2.5rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.headerLine {
+  width: 80px;
+  height: 3px;
+  background: var(--primary);
+  margin: 1rem auto;
+}
+
+.sectionSubtitle {
+  color: var(--text);
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+.staffCategory {
+  margin-bottom: 6rem;
+}
+
+.categoryHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+}
+
+.categoryTitle {
+  font-size: 1.8rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.scrollContainer {
+  overflow-x: auto;
+  padding: 2rem 1rem;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scroll-behavior: smooth;
+}
+
+.scrollContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.staffGrid {
+  display: inline-flex;
+  gap: 2rem;
+  padding: 0.5rem;
+}
+
+.staffCard {
+  flex: 0 0 300px;
+  background: var(--light);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 163, 224, 0.1);
+}
+
+.staffCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.staffImage {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+}
+
+.memberPicture {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.staffImage::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.4) 100%);
+}
+
+.staffIcon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.staffInfo {
+  padding: 2rem;
+  text-align: center;
+}
+
+.staffName {
+  font-size: 1.4rem;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.staffRole {
+  color: var(--primary);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.staffBio {
+  color: var(--text);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.staffStats {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.statItem {
+  text-align: center;
+}
+
+.statValue {
+  font-size: 1.2rem;
+  color: var(--primary);
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.statLabel {
+  font-size: 0.8rem;
+  color: var(--text);
+  opacity: 0.8;
+}
+
+.scrollButtons {
+  display: flex;
+  gap: 1rem;
+}
+
+.scrollButton {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--light);
+  border: 1px solid rgba(0, 163, 224, 0.2);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.scrollButton:hover {
+  background: var(--primary);
+  color: var(--light);
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .staffSection {
+    padding: 6rem 5%;
+  }
+
+  .sectionHeader h2 {
+    font-size: 2rem;
+  }
+
+  .categoryTitle {
+    font-size: 1.5rem;
+  }
+
+  .staffCard {
+    flex: 0 0 280px;
+  }
+
+  .staffImage {
+    height: 250px;
+  }
+}

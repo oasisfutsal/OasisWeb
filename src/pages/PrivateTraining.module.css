@@ -1,0 +1,270 @@
+.privateTraining {
+  padding-top: 80px;
+}
+
+.hero {
+  height: 60vh;
+  background: var(--gradient-sport);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--light);
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  padding: 0 2rem;
+}
+
+.heroTitle {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.mainContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.productSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin-bottom: 6rem;
+}
+
+.productImage {
+  height: 500px;
+  border-radius: 20px;
+  overflow: hidden;
+  background: var(--gradient-sport);
+  position: relative;
+}
+
+.productImage::before {
+  content: '⚽';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.productInfo {
+  padding: 2rem 0;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.stars {
+  color: #ffd700;
+  font-size: 1.2rem;
+}
+
+.reviewCount {
+  color: var(--text);
+  font-size: 0.9rem;
+}
+
+.price {
+  font-size: 3rem;
+  color: var(--primary);
+  font-weight: 700;
+  margin: 1.5rem 0;
+}
+
+.description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text);
+  margin-bottom: 2rem;
+}
+
+.addToCartSection {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.quantityInput {
+  width: 80px;
+  padding: 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.addToCartButton {
+  padding: 1rem 2rem;
+  background: var(--gradient-sport);
+  color: var(--light);
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.addToCartButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.reviewsSection {
+  margin-top: 6rem;
+  padding-top: 4rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.reviewsHeader {
+  margin-bottom: 3rem;
+}
+
+.reviewsHeader h2 {
+  font-size: 2rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.reviewCard {
+  background: var(--light);
+  padding: 2rem;
+  border-radius: 15px;
+  margin-bottom: 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.reviewHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.reviewerName {
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.reviewDate {
+  color: var(--text);
+  opacity: 0.7;
+}
+
+.reviewRating {
+  color: #ffd700;
+  margin-bottom: 1rem;
+}
+
+.reviewText {
+  color: var(--text);
+  line-height: 1.8;
+}
+
+.reviewForm {
+  margin-top: 4rem;
+  background: var(--background);
+  padding: 3rem;
+  border-radius: 20px;
+}
+
+.reviewForm h3 {
+  font-size: 1.5rem;
+  color: var(--accent);
+  margin-bottom: 2rem;
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.formGroup input,
+.formGroup textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.formGroup textarea {
+  min-height: 150px;
+}
+
+.ratingInput {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.submitButton {
+  background: var(--gradient-sport);
+  color: var(--light);
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submitButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 992px) {
+  .productSection {
+    grid-template-columns: 1fr;
+  }
+
+  .productImage {
+    height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+
+  .price {
+    font-size: 2.5rem;
+  }
+
+  .reviewForm {
+    padding: 2rem;
+  }
+}
